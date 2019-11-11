@@ -3,6 +3,7 @@ import re
 from urllib.request import urlopen
 webpage = urlopen("http://www.python.org")
 text = webpage.read()
+print(text.decode())  # 解码获取到的文件  urlopen('https://www.python.org/jobs/').read().decode()
 m = re.search(b'<a href="([^"]+)" .*?>about</a>', text, re.IGNORECASE)
 print(m.group())
 print(m.group(0))
@@ -21,6 +22,6 @@ print(localPage.readline())
 
 print("----------- 获取 远程文件【下载】 -----------")
 import urllib
+import urllib.request
 urllib.request.urlretrieve('http://www.python.org', r'F:\003_Project____Python\pycharm_project\PythonBegin_execise\chap14\python_webpage.html')
 urllib.request.urlcleanup()
-
