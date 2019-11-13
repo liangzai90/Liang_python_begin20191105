@@ -1,8 +1,9 @@
 # python_begin20191105
 
-<h5> 《python基础教程》第3版，学习笔记<h5>
+<h3> 《python基础教程》第3版，学习笔记<h3>
 
-<h5>我电脑的模块目录<h5>：
+<h3>我电脑的模块目录<h3>：
+
 C:\Users\heliang\venv\Lib\site-packages
 C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
 
