@@ -52,6 +52,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\link.exe /nologo /INC
 LINK : error LNK2001: unresolved external symbol PyInit_palindrome2
 build\temp.win32-3.8\Release\palindrome2.cp38-win32.lib : fatal error LNK1120: 1 unresolved externals
 error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\link.exe' failed with exit status 1120
+
 ```
 
 ## Python的扩展是个重点、打包也是一个重点
@@ -59,8 +60,11 @@ error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\
 这本书里面没有详细将这些。而且也不太严谨。很多例子无法编译通过。
 
 > 1.利用pycharm打包
+
 > 2..pipinstall工具打包
+
 > 3.pypi打包
+
 
 
 
