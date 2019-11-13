@@ -1,6 +1,8 @@
 # python_begin20191105
 
-### 《python基础教程》第3版，学习笔记
+### 《python基础教程》
+
+第3版，学习笔记
 
 ### 我电脑的模块目录：
 
@@ -19,4 +21,6 @@
 
 ### 指定文本是utf-8编码（如果遇到有中文解析出错，需要加上这行。去掉两边的“引号”）
 
->   # -*- coding: utf-8 -*-         
+>   "# -*- coding: utf-8 -*-"         
+
+[Learn More about Markdown,look here.](https://guides.github.com/features/mastering-markdown/)
