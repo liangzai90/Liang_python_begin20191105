@@ -4,9 +4,10 @@
 
 第3版，学习笔记
 
-### 我电脑的模块目录：
+### 我电脑的Python模块目录：
 
 > C:\Users\heliang\venv\Lib\site-packages
+
 > C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
 
 
@@ -23,4 +24,4 @@
 
 >   "# -*- coding: utf-8 -*-"         
 
-[Learn More about Markdown,look here.](https://guides.github.com/features/mastering-markdown/)
+###[Learn More about Markdown,look here.](https://guides.github.com/features/mastering-markdown/)
