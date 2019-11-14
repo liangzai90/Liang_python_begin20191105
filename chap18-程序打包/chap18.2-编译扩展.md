@@ -70,12 +70,10 @@ python setup_palindrome2.py install
 基础知识再回顾一下：
 
 1.将某个模块的路径加入到环境变量
-
 >>> import  sys 
->>> sys.path.append(r"F:\palindrome2\build\lib.win32-3.8")
+>>> sys.path.append(r"F:\这里是你本地的那个模块的路径\palindrome2\build\lib.win32-3.8")
 
 2.检测C函数封装是否成功
-
 >>> import palindrome2
 >>> palindrome2.is_palindrome2("在封装的模块中调用C函数")
 
