@@ -62,13 +62,34 @@ python setup_palindrome2.py build
 python setup_palindrome2.py install
 ```
 
+### 6.测试 
 
-如果没有报错，那么目录下面会生成一个build文件夹，下面会有一个.pyd的文件，我这里是_palindrome2.cp38-win32.pyd。
-这就是我们生成的Pythong动态库，把它所在路径包含到python目录中，就可以导入模块并调用我们刚才的C函数了。
+打开环境Python GUI 工具，测试模块是否安装、是否可调用
 
 ```
-基础知识再回顾一下：
+如果模块成功安装了，就不会报错
+>>> import palindrome2
 
+测试在Python中是否可以调用我们刚才导出的C函数
+>>> palindrome2.is_palindrome2("在封装的模块中调用C函数")
+```
+
+
+## 7.如果你只想就地编译扩展（不想install）
+
+```
+python setup_palindrome4.py build_ext --inplace
+```
+
+将会在当前目录下，看到 '_palindrome4.cp38-win32.pyd'， 'palindrome4.py' 这2个文件，
+还有palindrome4_wrap.c等等。
+把当前的路径添加到环境变量中，
+再测试 palindrome4模块是否刻意导入，是否可以调用模块里面的函数。
+
+
+## 8.基础知识再回顾一下：
+
+```
 1.将某个模块的路径加入到环境变量
 >>> import  sys 
 >>> sys.path.append(r"F:\这里是你本地的那个模块的路径\palindrome2\build\lib.win32-3.8")
@@ -77,12 +98,23 @@ python setup_palindrome2.py install
 >>> import palindrome2
 >>> palindrome2.is_palindrome2("在封装的模块中调用C函数")
 
+3.若干编译和发布的命令 
+
+执行build和install之后，会在系统里面自动安装你刚才写的模块
+python setup.py  build
+python setup.py  install
+
+执行sdist命令会发布你的模块
+python setup.py  sdist
+
+执行  build_ext  --inplace，可以就地测试模块功能
+python setup.py  build_ext  --inplace
 ```
 
 
 ----------------------------------------------------------------------
 
-## Python的扩展是个重点、打包也是一个重点
+## 9.Python的扩展是个重点、打包也是一个重点
 
 这本书里面没有详细将这些。而且也不太严谨。很多例子无法编译通过。
 
