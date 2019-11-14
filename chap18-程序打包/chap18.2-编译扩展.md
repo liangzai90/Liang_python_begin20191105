@@ -19,8 +19,11 @@ int is_palindrome2(char *text) {
 
 ```
 # file name: setup_palindrome2.py
-# 编译扩展.
-from distutils.core import setup, Extension
+
+# 编译扩展 setuptools 和 distutils.core 都可以
+
+# from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 palindrome2_module = Extension('_palindrome2',
     sources=['palindrome2.c', 'palindrome2.i',],
@@ -124,6 +127,14 @@ python setup.py  build_ext  --inplace
 
 > 3.pypi打包
 
+### 10.一点意外发现
+```
+编译扩展的时候，setuptools 和 distutils 都可以，只需要像下面这么导入模块
 
+from distutils.core import setup, Extension
+
+from setuptools import setup, Extension
+
+```
 
 
