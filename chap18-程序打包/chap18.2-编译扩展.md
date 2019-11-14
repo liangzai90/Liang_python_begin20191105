@@ -1,59 +1,88 @@
-## 使用Setuptools实现编译扩展
+## 编译扩展，将C语言编写的函数封装到Python动态库(.pyd文件)，供Python导入模块并调用
 
 #### 1.准备好 palindrome2.c 文件
 
 ```
 #include <string.h>
 
-int is_palindrome(char *text) {
+int is_palindrome2(char *text) {
     int i, n = strlen(text);
     for (i = 0; i <= n/2; ++i) {
         if (text[i] != text[n-i-1]) return 0;
     }
     return 1;
 }
+
 ```
 
-#### 2.准备好打包脚本 setup_palindrome2.py
+#### 2.准备好打包脚本 setup_palindrome2.py 请注意，这里是导入distutils.core模块
 
 ```
 # file name: setup_palindrome2.py
 # 编译扩展.
-from setuptools import setup, Extension
+from distutils.core import setup, Extension
 
+palindrome2_module = Extension('_palindrome2',
+    sources=['palindrome2.c', 'palindrome2.i',],
+)
 setup(
     name='palindrome2',
-    version='1.0',
-    author='He Liang Liang',
-    ext_modules = [
-        Extension('palindrome2', ['palindrome2.c'])
-    ]
+    version='1.5',
+    author="HE Liang Liang",
+    description= """Simple swig C\+\+/Python example""",
+    ext_modules=[palindrome2_module],
+    py_modules=["palindrome2"],
 )
 ```
 
-### 3.执行打包命令 
+#### 3.编写 palindrome2.i 接口文件
+
+[请参考swig官方文档](http://www.swig.org/Doc4.0/SWIGDocumentation.html#SWIG_nn9)
 
 ```
-python setup_palindrome2.py build_ext --inplace
+%module palindrome2
+
+%{
+#include <string.h>
+%}
+
+extern int is_palindrome2(char *text);
 ```
-编译出错了。。。卡壳了。。
+
+
+### 4.执行打包命令 
+
+```
+python setup_palindrome2.py build
+```
+
+### 5.安装模块 
+
+```
+python setup_palindrome2.py install
+```
+
+
+如果没有报错，那么目录下面会生成一个build文件夹，下面会有一个.pyd的文件，我这里是_palindrome2.cp38-win32.pyd。
+这就是我们生成的Pythong动态库，把它所在路径包含到python目录中，就可以导入模块并调用我们刚才的C函数了。
+
+```
+基础知识再回顾一下：
+
+1.将某个模块的路径加入到环境变量
+
+>>> import  sys 
+>>> sys.path.append(r"F:\palindrome2\build\lib.win32-3.8")
+
+2.检测C函数封装是否成功
+
+>>> import palindrome2
+>>> palindrome2.is_palindrome2("在封装的模块中调用C函数")
 
 ```
 
-running build_ext
-building 'palindrome2' extension
-creating build
-creating build\temp.win32-3.8
-creating build\temp.win32-3.8\Release
-C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\cl.exe /c /nologo /Ox /W3 /GL /DNDEBUG /MD -IC:\Users\heliang\AppData\Local\Programs\Python\Python38-32\include -IC:\Users\heliang\AppData\Local\Programs\Python\Python38-32\include "-IC:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\INCLUDE" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.10240.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\8.1\include\shared" "-IC:\Program Files (x86)\Windows Kits\8.1\include\um" "-IC:\Program Files (x86)\Windows Kits\8.1\include\winrt" /Tcpalindrome2.c /Fobuild\temp.win32-3.8\Release\palindrome2.obj
-palindrome2.c
-creating F:\003_Project____Python\pycharm_project\PythonBegin_execise\chap18\palindrome2\build\lib.win32-3.8
-C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\BIN\link.exe /nologo /INCREMENTAL:NO /LTCG /DLL /MANIFEST:EMBED,ID=2 /MANIFESTUAC:NO /LIBPATH:C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\libs /LIBPATH:C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\PCbuild\win32 "/LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\LIB" "/LIBPATH:C:\Program Files (x86)\Windows Kits\10\lib\10.0.10240.0\ucrt\x86" "/LIBPATH:C:\Program Files (x86)\Windows Kits\8.1\lib\winv6.3\um\x86" /EXPORT:PyInit_palindrome2 build\temp.win32-3.8\Release\palindrome2.obj /OUT:build\lib.win32-3.8\palindrome2.cp38-win32.pyd /IMPLIB:build\temp.win32-3.8\Release\palindrome2.cp38-win32.lib
-LINK : error LNK2001: unresolved external symbol PyInit_palindrome2
-build\temp.win32-3.8\Release\palindrome2.cp38-win32.lib : fatal error LNK1120: 1 unresolved externals
-error: command 'C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\VC\\BIN\\link.exe' failed with exit status 1120
 
-```
+----------------------------------------------------------------------
 
 ## Python的扩展是个重点、打包也是一个重点
 
