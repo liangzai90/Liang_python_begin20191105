@@ -1,0 +1,12 @@
+# 一个setup.py文件示例
+from setuptools import setup, Extension
+
+setup(
+    name='palindrome',
+    version='1.1',
+    author="HE Liang Liang",
+    description= """Simple swig C\+\+/Python example""",
+    ext_modules=[
+        Extension('_palindrome', ['palindrome.c',
+                                 'palindrome.i'])
+])
