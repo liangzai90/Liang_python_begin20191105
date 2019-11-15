@@ -14,13 +14,15 @@ C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
 ```
 
 
-### 2.在windows下面 指定python解释器路径，下面代码需要放在脚边第1行:tv:
+### 2.在windows环境
+
+指定python解释器路径，下面代码需要放在脚边第1行:tv:
 
 ```
 #!C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\python.exe
 ```
 
-### 3.如果是在Linux下面
+### 3.如果是在Linux环境
 
 则第1行 应该像下面这么写:iphone:
 
@@ -36,11 +38,11 @@ C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\Lib\site-packages
 # -*- coding: utf-8 -*-
 ```
 
-### Other topic
+### 6.Other topic
 
-[Learn More about Markdown,look here.](https://guides.github.com/features/mastering-markdown/)
+:one: [Learn More about Markdown,look here.](https://guides.github.com/features/mastering-markdown/)
 
-[if you want to know more about emoji,look here.](https://www.webfx.com/tools/emoji-cheat-sheet/)
+:two: [if you want to know more about emoji,look here.](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 
 
