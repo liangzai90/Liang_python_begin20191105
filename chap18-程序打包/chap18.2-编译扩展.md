@@ -92,7 +92,7 @@ python setup_palindrome4.py build_ext --inplace
 
 ## 8.基础知识再回顾一下：
 
-```
+```Python console
 1.将某个模块的路径加入到环境变量
 >>> import  sys 
 >>> sys.path.append(r"F:\这里是你本地的那个模块的路径\palindrome2\build\lib.win32-3.8")
