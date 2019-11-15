@@ -5,7 +5,14 @@
 使用到的第三方工具是 ReportLab，这个网站是需要注册的。其它图形包还有PYX([https://pyx-project.org/](https://pyx-project.org/))。
 
 
-**要想深入学习，需要研究一下这些模块都有哪些函数，功能是什么。**
+**要想深入学习，需要研究一下这些模块都有哪些函数，功能是什么，要深入源码，研究源码。**
+
+```Python console
+>>> import reportlab
+>>> reportlab.__file__
+'C:\\Users\\heliang\\AppData\\Local\\Programs\\Python\\Python38-32\\lib\\site-packages\\reportlab\\__init__.py'
+>>> 
+```
  
 
 ### 2.进一步探索
