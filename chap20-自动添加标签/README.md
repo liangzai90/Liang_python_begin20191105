@@ -28,9 +28,9 @@ python  markup.py  < test_input.txt >  output.html
 
 特别是这个程序嵌套的比较厉害。
 
-### 5.进一步探索 :simple_smile: :100:
+### 5.进一步探索  :100:
 
-这个程序存在潜在的扩展空间。
+这个程序存在潜在的扩展空间。 :bicyclist: :gem: :memo:  :simple_smile:
 
 - [ ] 增加对表格的支持。为此，只需找出左对齐内容的边界，并将文本块分成多列。
 
@@ -44,7 +44,7 @@ python  markup.py  < test_input.txt >  output.html
 
 - [ ] 了解其他纯文本格式，如Markdown、reStructuredText或维基百科使用的格式。
 
-#### other topic
+### other topic
 
 [if you want to know more about emoji, click me!](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
