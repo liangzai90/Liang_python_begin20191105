@@ -69,5 +69,13 @@ parser = BasicTextParser(handler)
 
 parser.parse(sys.stdin)
 
-# 在 Cygwin下面执行这个 Linux 命令
-# python markup.py  < test_input.txt > output.html
+
+"""
+
+------------ 【 请 注 意 】 -------------
+在 Cygwin下面执行下面的 Linux 命令，让脚本正确执行起来
+ python markup.py  < test_input.txt > output.html
+
+"""
+
+
