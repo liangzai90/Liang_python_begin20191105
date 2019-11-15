@@ -2,10 +2,10 @@
 
 ### 1.本章介绍如何使用Python创建图表。具体地说，你将创建一个PDF文件。
 
-使用到的第三方工具是 ReportLab，这个网站是需要注册的。其它图形包还有PYX(*[https://pyx-project.org/](https://pyx-project.org/)*)。
+使用到的第三方工具是 ReportLab，这个网站是需要注册的。其它图形包还有PYX([https://pyx-project.org/](https://pyx-project.org/))。
 
 
-*要想深入学习，需要研究一下这些模块都有哪些函数，功能是什么。*
+**要想深入学习，需要研究一下这些模块都有哪些函数，功能是什么。**
  
 
 ### 2.进一步探索
