@@ -42,7 +42,7 @@ setup(
 
 [请参考swig官方文档](http://www.swig.org/Doc4.0/SWIGDocumentation.html#SWIG_nn9)
 
-```Shell
+```
 %module palindrome2
 
 %{
@@ -55,13 +55,13 @@ extern int is_palindrome2(char *text);
 
 ### 4.执行打包命令 
 
-```Shell
+```
 python setup_palindrome2.py build
 ```
 
 ### 5.安装模块 
 
-```Shell
+```
 python setup_palindrome2.py install
 ```
 
@@ -80,7 +80,7 @@ python setup_palindrome2.py install
 
 ## 7.如果你只想就地编译扩展（不想install）
 
-```Shell
+```
 python setup_palindrome4.py build_ext --inplace
 ```
 
@@ -92,9 +92,8 @@ python setup_palindrome4.py build_ext --inplace
 
 ## 8.基础知识再回顾一下：
 
-```Python console
+```python console
 1.将某个模块的路径加入到环境变量
-
 >>> import  sys 
 >>> sys.path.append(r"F:\这里是你本地的那个模块的路径\palindrome2\build\lib.win32-3.8")
 
@@ -104,16 +103,13 @@ python setup_palindrome4.py build_ext --inplace
 
 3.若干编译和发布的命令 
 执行build和install之后，会在系统里面自动安装你刚才写的模块
-
 python setup.py  build
 python setup.py  install
 
 执行sdist命令会发布你的模块
-
 python setup.py  sdist
 
 执行  build_ext  --inplace，可以就地测试模块功能
-
 python setup.py  build_ext  --inplace
 
 ```
