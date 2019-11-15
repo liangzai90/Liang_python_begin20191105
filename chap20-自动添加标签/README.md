@@ -30,7 +30,7 @@ python  markup.py  < test_input.txt >  output.html
 
 ### 5.进一步探索  :100:
 
-这个程序存在潜在的扩展空间。 :bicyclist: :gem: :memo:  :simple_smile:
+这个程序存在潜在的扩展空间。 :bicyclist: :gem: :memo:  :smile:
 
 - [ ] 增加对表格的支持。为此，只需找出左对齐内容的边界，并将文本块分成多列。
 
