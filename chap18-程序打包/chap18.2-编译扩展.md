@@ -2,7 +2,7 @@
 
 #### 1.准备好 palindrome2.c 文件
 
-```
+```c
 #include <string.h>
 
 int is_palindrome2(char *text) {
@@ -17,7 +17,7 @@ int is_palindrome2(char *text) {
 
 #### 2.准备好打包脚本 setup_palindrome2.py 请注意，这里是导入distutils.core模块
 
-```
+```python
 # file name: setup_palindrome2.py
 
 # 编译扩展 setuptools 和 distutils.core 都可以
@@ -42,7 +42,7 @@ setup(
 
 [请参考swig官方文档](http://www.swig.org/Doc4.0/SWIGDocumentation.html#SWIG_nn9)
 
-```
+```bash
 %module palindrome2
 
 %{
@@ -55,13 +55,13 @@ extern int is_palindrome2(char *text);
 
 ### 4.执行打包命令 
 
-```
+```linux
 python setup_palindrome2.py build
 ```
 
 ### 5.安装模块 
 
-```
+```linux
 python setup_palindrome2.py install
 ```
 
@@ -80,7 +80,7 @@ python setup_palindrome2.py install
 
 ## 7.如果你只想就地编译扩展（不想install）
 
-```
+```linux
 python setup_palindrome4.py build_ext --inplace
 ```
 
