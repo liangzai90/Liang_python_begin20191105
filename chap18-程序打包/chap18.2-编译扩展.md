@@ -1,4 +1,4 @@
-## 编译扩展，将C语言编写的函数封装到Python动态库(.pyd文件)，供Python导入模块并调用
+## 将C语言编写的函数封装，供Python调用
 
 #### 1.准备好 palindrome2.c 文件
 
@@ -42,7 +42,7 @@ setup(
 
 [请参考swig官方文档](http://www.swig.org/Doc4.0/SWIGDocumentation.html#SWIG_nn9)
 
-```bash
+```shell
 %module palindrome2
 
 %{
@@ -55,13 +55,13 @@ extern int is_palindrome2(char *text);
 
 ### 4.执行打包命令 
 
-```linux
+```shell
 python setup_palindrome2.py build
 ```
 
 ### 5.安装模块 
 
-```linux
+```shell
 python setup_palindrome2.py install
 ```
 
@@ -80,7 +80,7 @@ python setup_palindrome2.py install
 
 ## 7.如果你只想就地编译扩展（不想install）
 
-```linux
+```shell
 python setup_palindrome4.py build_ext --inplace
 ```
 
