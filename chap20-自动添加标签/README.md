@@ -2,7 +2,7 @@
 
 ### 1.项目中用到的正则表达式
 
-分别用来找出【要突出的内容】、【URL】、【Email】
+分别用来找出【要突出的内容】、【URL】、【Email】 :octocat:
 
 ```
  r'\*(.+?)\*'
@@ -10,17 +10,17 @@
  r'([\.a-zA-Z]+@[\.a-zA-Z]+[a-zA-Z]+)'
 ```
 
-### 2.通过stdin输入文本字符
+### 2.通过stdin输入文本字符   :earth_asia:
 
 目前，在windows运行脚本，没有得到期望的结果。不知道如何在windows的cmd窗口执行这中带文本参数的命令。
 
-我在电脑上安装了 Cygwin，然后执行了 ** 带参数的Python命令 ** ，是可以正常执行的。
+我在电脑上安装了 Cygwin，然后执行了 **带参数的Python命令** ，是可以正常执行的。
 
 ```
 python  markup.py  < test_input.txt >  output.html 
 ```
 
-### 3.存在的问题
+### 3.存在的问题 :cold_sweat: :joy: :broken_heart: :muscle:
 
 虽然生成了 output.html，但是里面的文本重复了3次。
 
@@ -28,7 +28,7 @@ python  markup.py  < test_input.txt >  output.html
 
 特别是这个程序嵌套的比较厉害。
 
-### 5.进一步探索
+### 5.进一步探索 :simple_smile: :100:
 
 这个程序存在潜在的扩展空间。
 
@@ -43,5 +43,9 @@ python  markup.py  < test_input.txt >  output.html
 - [ ] 创建一个脚本，将特定目录中的所有文本文件都自动转换为HTML文件。
 
 - [ ] 了解其他纯文本格式，如Markdown、reStructuredText或维基百科使用的格式。
+
+#### other topic
+
+[if you want to know more about emoji, click me!](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 
