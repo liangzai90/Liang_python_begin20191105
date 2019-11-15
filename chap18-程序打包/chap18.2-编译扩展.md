@@ -42,7 +42,7 @@ setup(
 
 [请参考swig官方文档](http://www.swig.org/Doc4.0/SWIGDocumentation.html#SWIG_nn9)
 
-```shell
+```gcc
 %module palindrome2
 
 %{
@@ -55,13 +55,13 @@ extern int is_palindrome2(char *text);
 
 ### 4.执行打包命令 
 
-```shell
+```gcc
 python setup_palindrome2.py build
 ```
 
 ### 5.安装模块 
 
-```shell
+```gcc
 python setup_palindrome2.py install
 ```
 
@@ -69,7 +69,7 @@ python setup_palindrome2.py install
 
 打开环境Python GUI 工具，测试模块是否安装、是否可调用
 
-```
+```python consloe
 如果模块成功安装了，就不会报错
 >>> import palindrome2
 
@@ -80,7 +80,7 @@ python setup_palindrome2.py install
 
 ## 7.如果你只想就地编译扩展（不想install）
 
-```shell
+```gcc
 python setup_palindrome4.py build_ext --inplace
 ```
 
