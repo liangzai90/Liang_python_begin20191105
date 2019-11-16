@@ -165,3 +165,15 @@ if __name__ == '__main__':
     s = ChatServer(PORT, NAME)
     try:asyncore.loop()
     except KeyboardInterrupt:print()
+  
+
+
+
+"""    
+
+按照书上示例编写代码，遇到了编码问题，网上参考了这些链接
+https://segmentfault.com/q/1010000000616608
+https://stackoverflow.com/questions/24928908/python3-type-str-doesnt-support-the-buffer-api    
+
+"""
+
