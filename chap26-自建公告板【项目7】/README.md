@@ -15,7 +15,7 @@ import sqlite3
 conn = sqlite3.connect('myweb.db')
 curs = conn.cursor()
 
-"""
+""" 创建表的时候，开启这里的代码；表创建好了，就屏蔽这里的代码
 curs.execute('''
 CREATE TABLE messages(
 id         integer    primary  key  autoincrement,
