@@ -28,9 +28,9 @@ cgitb.enable()  在CGI脚本中启用栈跟踪
 
 ### 请注意
 
-```
 使用CGI创建动态网页
 
+```
 Linux环境，第1行 应该像下面这么写
 #!/usr/bin/env python
 
@@ -38,3 +38,9 @@ windows环境，第1行应该明确指出 python.exe的路径
 #!C:\Users\heliang\AppData\Local\Programs\Python\Python38-32\python.exe
 
 ```
+
+你需要在Windows 配置Apache+CGI，然后通过浏览器访问脚本
+
+[安装和设置方法，请点击这里。](https://www.cnblogs.com/music-liang/p/11846268.html)
+
+
