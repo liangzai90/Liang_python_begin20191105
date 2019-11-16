@@ -21,6 +21,15 @@
 重定向可使用location首部来实现，其工作原理类似于Content-type。为此，
 只需在输出的header部分（第1个空行前）加上Location：、空格和要重定向到的URL。
 
+### hash
+
+```Python console
+>>> from hashlib import sha1
+>>> sha1(b'heliang').hexdigest()
+'e11cf310a9d0dcb61ed62c71cbd290fda26a5ccc'
+>>> 
+```
+
 
 ### 存在的难问题
 
