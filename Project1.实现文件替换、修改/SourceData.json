@@ -1,0 +1,29 @@
+{
+    "Author": "heliang", 
+    "Readme": "光明棋牌 正式版本 配置文件--20161116", 
+    
+    "loadPreambleCfg": {
+        "iSiteId": 101, 
+        "sChannelId": "0121000000100000", 
+        "sUrl": "http://mobilesite.qpgmw.cn/index.do?",
+        "sVerifyChannelId": "0121000000100000"
+    }, 
+    "lobby": {
+        "activityDomain": "http://activity.qpgmw.cn/",
+        "domain": "http://mobilesite.qpgmw.cn/",
+        "iLobbySiteID": 101, 
+        "ip": "lbgm.7pmigame.com"
+    }, 
+    "login": {
+        "channelID": "0121000000100000", 
+        "domain": "http://mobilesite.qpgmw.cn/",  
+        "iSiteID": 101, 
+        "ip0": "lngm.7pmigame.com", 
+        "ip1": "lngm.7pmigame.com"
+    }, 
+    "options": {
+        "sIosProductId": "com.gmw.douzi.lobby.Purch", 
+        "sWxAppId": "wx9586439235a291fc", 
+        "sWxSecret": "0fe9133855d6897e422c323c64a8dc56"
+    }
+}
